@@ -9,6 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.lemmetravel.seniorproject.R;
+import com.lemmetravel.seniorproject.activities.ChapterActivity;
 
 public class viewHolder extends RecyclerView.ViewHolder {
 
@@ -29,9 +30,9 @@ public class viewHolder extends RecyclerView.ViewHolder {
             @Override
             public void onClick(View v) {
                 int clickIndex = (int) v.getTag();
-                /**Intent nextPage = new Intent(context,chapterActivity.class);
+                Intent nextPage = new Intent(context,ChapterActivity.class);
                 nextPage.putExtra("PARAM", clickIndex);
-                context.startActivity(nextPage);**/
+                context.startActivity(nextPage);
 
                 Toast.makeText(context, "Index : " + clickIndex, Toast.LENGTH_SHORT).show();
                 //Snackbar.make(v, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show();

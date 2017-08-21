@@ -1,5 +1,6 @@
 package com.lemmetravel.seniorproject.activities;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -21,6 +22,8 @@ import android.widget.ImageView;
 import com.lemmetravel.seniorproject.R;
 import com.lemmetravel.seniorproject.fragments.homeFragment;
 import com.squareup.picasso.Picasso;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -57,6 +60,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         // Home
         showFragment(HOME, false);
+        navigationView.setCheckedItem(R.id.nav_home);
     }
 
     private void initInstance() {
@@ -80,6 +84,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         // Fab button listener
         fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setImageResource(R.mipmap.ic_add_white_24dp);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -188,4 +193,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         });
     }
 
+    // Fonts
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
 }

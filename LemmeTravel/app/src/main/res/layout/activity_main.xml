@@ -21,18 +21,15 @@
             <android.support.design.widget.CollapsingToolbarLayout
                 android:id="@+id/collapsing_toolbar_layout"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="?attr/actionBarSize"
                 app:layout_scrollFlags="scroll|enterAlways">
 
                 <ImageView
                     android:id="@+id/logo_img"
-                    android:layout_width="125dp"
-                    android:layout_height="75dp"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
                     android:layout_gravity="top|center_horizontal"
-                    android:layout_marginLeft="15dp"
-                    android:contentDescription="Trip Image"
-                    android:scaleType="centerInside"
-                    />
+                    android:contentDescription="Trip Image" />
 
                 <android.support.v7.widget.Toolbar
                     android:id="@+id/toolbar"
@@ -77,8 +74,11 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
             android:layout_margin="@dimen/fab_margin"
-            app:backgroundTint="@color/yellowTheme"
-            app:layout_behavior="com.lemmetravel.seniorproject.behaviors.ScrollAwareFABBehavior"
+            android:background="@color/cardview_dark_background"
+            app:borderWidth="0dp"
+            app:elevation="6dp"
+            app:layout_behavior="@string/appbarsyncedfab_fab_behavior"
+            android:scaleType="fitXY"
             />
 
     </android.support.design.widget.CoordinatorLayout>
@@ -91,7 +91,11 @@
         android:background="@color/applicationBackground"
         app:headerLayout="@layout/nav_header"
         app:menu="@menu/nav_menu"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+        app:popupTheme="@style/NavigationDrawerStyle"
+        app:itemTextColor="@color/nav_item_color"
+        app:itemIconTint="@color/nav_item_color"
+        app:theme="@style/NavigationDrawerStyle"
+
+        />
 
 </android.support.v4.widget.DrawerLayout>

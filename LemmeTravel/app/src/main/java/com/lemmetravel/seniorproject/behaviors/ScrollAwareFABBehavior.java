@@ -6,7 +6,10 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.view.ViewCompat;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
+
+import static android.content.ContentValues.TAG;
 
 public class ScrollAwareFABBehavior extends CoordinatorLayout.Behavior<FloatingActionButton>  {
     public ScrollAwareFABBehavior(Context context, AttributeSet attrs) {
@@ -34,9 +37,10 @@ public class ScrollAwareFABBehavior extends CoordinatorLayout.Behavior<FloatingA
                     fab.setVisibility(View.INVISIBLE);
                 }
             });
-        } else if (dyConsumed <= 0 && child.getVisibility() != View.VISIBLE) {
+        } else if (dyConsumed < 0 && child.getVisibility() != View.VISIBLE) {
             child.show();
         }
+        Log.d(TAG, "dy : " + dyConsumed);
     }
 
 

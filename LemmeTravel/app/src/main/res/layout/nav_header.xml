@@ -32,13 +32,15 @@
         android:layout_marginLeft="10dp"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:text="Name"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/yellowTheme" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:text="Description" />
+        android:text="Description"
+        android:textColor="@color/whiteTheme" />
 
 </LinearLayout>

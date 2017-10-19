@@ -1,23 +1,20 @@
-package com.lemmetravel.seniorproject.adapters;
+package com.lemmetravel.seniorproject.adapters.viewholders;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.lemmetravel.seniorproject.R;
-import com.lemmetravel.seniorproject.activities.ChapterActivity;
 
-public class viewHolder extends RecyclerView.ViewHolder {
+public class TripVH extends RecyclerView.ViewHolder {
 
-    ImageView tripPhoto;
-    TextView tripName;
-    TextView tripDescription;
+    public ImageView tripPhoto;
+    public TextView tripName;
+    public TextView tripDescription;
 
-    public viewHolder(View itemView, final Context context) {
+    public TripVH(View itemView, final Context context) {
         super(itemView);
 
         tripPhoto = (ImageView) itemView.findViewById(R.id.chapter_cover);
@@ -26,7 +23,7 @@ public class viewHolder extends RecyclerView.ViewHolder {
 
 
 
-        itemView.setOnClickListener(new View.OnClickListener() {
+        /**itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 int clickIndex = (int) v.getTag();
@@ -38,7 +35,7 @@ public class viewHolder extends RecyclerView.ViewHolder {
                 //Snackbar.make(v, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show();
 
             }
-        });
+        });**/
     }
 
 

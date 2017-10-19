@@ -20,5 +20,10 @@
     <string name="tab_new">ทริปล่าสุด</string>
     <string name="tab_recomend">แนะนำ</string>
 
+    <!-- Activity Chapter -->
+    <string name="Chapter_Menu">ตอนทั้งหมด</string>
+    <string name="Event_Menu">เหตุการณ์ทั้งหมด</string>
+    <string name="Author_Menu">ผู้เขียนบทความ</string>
+
 
 </resources>

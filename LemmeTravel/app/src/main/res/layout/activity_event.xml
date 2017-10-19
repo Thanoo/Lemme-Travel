@@ -1,9 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/applicationBackground"
     tools:context="com.lemmetravel.seniorproject.activities.EventActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/space"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/toolbar_image_gradient" />
+
+            <org.sufficientlysecure.htmltextview.HtmlTextView
+                android:id="@+id/eventContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ทริปเที่ยวสิงคโปร์ครั้งนี้ เกิดจากการไปเจอตั๋วเครื่องบินค่ายหางแดงราคาถูก ซึ่งเป็นช่วงโปรโมชั่นพอ ก็เลยรวบรวมพรรคพวกที่เคยพูดกันเอาไว้ว่าจะไปสิงคโปร์ด้วยกัน เลยรวมตัวกันมาได้ 4 คน แล้วจึงกดจองตั๋วมาอย่างไว จองไว้ตั้งแต่ต้นปี เพิ่งจะได้ไปเอากลางปี ทริปนี้ไปทั้งหมด 4 วัน 3 คืน ชาย 1 หญิง 3 (จริงๆจะพาแฟนไปด้วย ดันงอนที่ไม่พาไปเที่ยวที่อื่น ก็เลยไม่ยอมไปด้วย เชอะ) นอกจากจะได้ตั๋วราคาถูกแล้ว ยังไปเจอโฮสเทลราคาถูก (คุณภาพก็สมราคา เล่นเอาไม่กล้าอาบน้ำเลยทีเดียว) ไหนๆก็ได้ตั๋วแล้ว ก็ไปซะหน่อยละกัน ส่วนเรื่องราวการท่องเที่ยวแดนสิงคโปร์ครั้งแรกของพวกเราจะเป็นยังไงนั้น ไปติดตามกันเลยย...~"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="256dp"
+                android:text="ทริปเที่ยวสิงคโปร์ครั้งนี้ เกิดจากการไปเจอตั๋วเครื่องบินค่ายหางแดงราคาถูก ซึ่งเป็นช่วงโปรโมชั่นพอ ก็เลยรวบรวมพรรคพวกที่เคยพูดกันเอาไว้ว่าจะไปสิงคโปร์ด้วยกัน เลยรวมตัวกันมาได้ 4 คน แล้วจึงกดจองตั๋วมาอย่างไว จองไว้ตั้งแต่ต้นปี เพิ่งจะได้ไปเอากลางปี ทริปนี้ไปทั้งหมด 4 วัน 3 คืน ชาย 1 หญิง 3 (จริงๆจะพาแฟนไปด้วย ดันงอนที่ไม่พาไปเที่ยวที่อื่น ก็เลยไม่ยอมไปด้วย เชอะ) นอกจากจะได้ตั๋วราคาถูกแล้ว ยังไปเจอโฮสเทลราคาถูก (คุณภาพก็สมราคา เล่นเอาไม่กล้าอาบน้ำเลยทีเดียว) ไหนๆก็ได้ตั๋วแล้ว ก็ไปซะหน่อยละกัน ส่วนเรื่องราวการท่องเที่ยวแดนสิงคโปร์ครั้งแรกของพวกเราจะเป็นยังไงนั้น ไปติดตามกันเลยย...~"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp" />
+    </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+    <me.henrytao.smoothappbarlayout.SmoothAppBarLayout
+        android:id="@+id/chapter_AppbraLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/chapter_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_weight="1"
+            android:minHeight="?attr/actionBarSize"
+            app:layout_collapseMode="pin"
+            app:titleTextColor="@color/yellowTheme"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:background="@color/toolbarBackground"
+            app:layout_scrollFlags="scroll|enterAlways"/>
+    </me.henrytao.smoothappbarlayout.SmoothAppBarLayout>
+
+</android.support.design.widget.CoordinatorLayout>

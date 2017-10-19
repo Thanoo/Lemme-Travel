@@ -5,11 +5,14 @@
     <color name="colorAccent">#dea507</color>
 
     <color name="toolbarBackground">#1f1f1f</color>
-    <color name="applicationBackground">#212121</color>
+    <color name="applicationBackground">#181818</color>
     <color name="whiteTheme">#ffffff</color>
     <color name="yellowTheme">#f9b802</color>
+    <color name="fontColor">#f5f5f5</color>
 
-    <color name="item_list_bg">#80000000</color>
+    <color name="item_list_bg">#93000000</color>
+    <color name="item_chapterlist_bg">#63000000</color>
+    <color name="author_box">#1d1d1d</color>
 
 
 </resources>

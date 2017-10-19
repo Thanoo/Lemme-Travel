@@ -6,14 +6,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.lemmetravel.seniorproject.Model.TripData;
 import com.lemmetravel.seniorproject.R;
 import com.squareup.picasso.Picasso;
 
 public class RectclerViewAdapter extends RecyclerView.Adapter<viewHolder>{
-    
+
     Context context;
-    public RectclerViewAdapter(Context context) {
+    TripData[] tripDatas;
+
+    public RectclerViewAdapter(Context context, TripData[] tripDatas) {
         this.context = context;
+        this.tripDatas = tripDatas;
     }
 
     @Override
@@ -26,6 +30,7 @@ public class RectclerViewAdapter extends RecyclerView.Adapter<viewHolder>{
 
     @Override
     public void onBindViewHolder(viewHolder holder, int position) {
+
         Picasso.with(context).load(R.drawable.example).resize(300,300).into(holder.tripPhoto);
         holder.tripName.setText("เที่ยวสิงคโปร์ด้วยตัวเอง");
         holder.tripDescription.setText("ทริปเที่ยวสิงคโปร์ครั้งนี้ เกิดจากการไปเจอตั๋วเครื่องบินค่ายหางแดงราคาถูก ซึ่งเป็นช่วงโปรโ...");

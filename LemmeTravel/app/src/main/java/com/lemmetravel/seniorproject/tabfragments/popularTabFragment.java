@@ -1,35 +1,29 @@
 package com.lemmetravel.seniorproject.tabfragments;
 
 
+import android.app.Fragment;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.lemmetravel.seniorproject.Model.TripData;
 import com.lemmetravel.seniorproject.R;
-import com.lemmetravel.seniorproject.adapters.RectclerViewAdapter;
-import com.lemmetravel.seniorproject.adapters.recyclerviews.TripRV;
 
 import java.lang.reflect.Type;
 import java.util.Collection;
 
-import okhttp3.MultipartBody;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-import okhttp3.RequestBody;
 import okhttp3.Response;
 
 public class popularTabFragment extends Fragment {
-
     private RecyclerView trip_recyclerView;
     TripData[] tripDatas;
 
@@ -42,8 +36,8 @@ public class popularTabFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.tabfragment_popular, container, false);
-        trip_recyclerView = (RecyclerView) rootView.findViewById(R.id.trip_list);
-        trip_recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
+        trip_recyclerView = rootView.findViewById(R.id.trip_list);
+        trip_recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
         new FeedTripList().execute();
 
         return rootView;
@@ -90,7 +84,7 @@ public class popularTabFragment extends Fragment {
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
             //Toast.makeText(getContext(),tripDatas[0].getTitle(), Toast.LENGTH_LONG).show();
-            trip_recyclerView.setAdapter(new TripRV(getActivity(),tripDatas));
+            //trip_recyclerView.setAdapter(new TripRV(getActivity(),tripDatas));
         }
 
 

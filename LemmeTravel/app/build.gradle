@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.0"
+    buildToolsVersion '27.0.3'
     defaultConfig {
         applicationId "com.lemmetravel.seniorproject"
         minSdkVersion 15
@@ -33,7 +33,8 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.android.support:cardview-v7:26.+'
-    compile 'com.android.support:recyclerview-v7:26.+'
+    compile 'com.android.support:recyclerview-v7:26.1.0'
+    compile 'com.android.support:recyclerview-v7:27.1.1'
     compile 'me.henrytao:smooth-app-bar-layout:25.3.1.0'
     compile 'uk.co.chrisjenx:calligraphy:2.1.0'
     compile 'com.github.strooooke:appbarsyncedfab:v0.4'
